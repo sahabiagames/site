@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+<head>
+<title>sahabia</title>
+<meta charset="UTF-8">
+<link href="MYLOGO.png" rel="shortcut icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1"><div class="header">
+ <h2>بازی ها</h2>
+ <p>بازی هایی که ساخته ام</p>
+</div>
+</head>
+<style>
+@font-face { 
+font-family: 'best'; src: url('fonts/best.ttf'); format('truetype'); 
+}
+/* تفکیک سایز تگ ها */
+*{
+ box-sizing: border-box;
+}
+
+/* محبوب ترین دسته ها */
+body{
+ font-family: best;
+ margin: 0;
+ direction:rtl;
+ background-color:#f2f2f2;
+}
+
+/* هدر */
+.header{
+ padding: 40px;
+ text-align: center;
+ 
+ color: #0e264a;
+ background-image: url(ee.jpg);
+ background-attachment: fixed;
+ background-position: center bottom;
+ background-size: cover;
+ //https://files.free-learn.ir/Tryitself/html/tags/files/div-demo-bg.jpg
+//https://photobag.ir/videoframe/img/product/5044261_big.jpg
+} 
+
+.header h1{
+ font-size: 30px;
+}
+
+/* منوی اصلی */
+.navbar{
+ overflow: hidden;
+ background-color: #8f5f96;
+ position: sticky;
+}
+
+/* آیتم های منو */
+.navbar a{
+ float: right;
+ display: block;
+ color: #fff;
+ text-align: center;
+ padding: 14px 20px;
+ text-decoration: none;
+ font-size:15px;
+ position: sticky;
+}
+
+/* آیتم شناور شده بسمت چپ */
+.navbar a.right {
+  float: left;
+  position: sticky;
+}
+
+/* وقتی ماوس میره روی آیتم های منو */
+.navbar a:hover{
+ background-color: #484c66;
+ color: #fff;
+}
+
+/* آیتم فعال - صفحه جاری */
+.navbar a.active{
+ background-color: #484c66;
+ color: #fff;
+}
+
+/* باکس اصلی که شامل ستون ها و باکس مطالب می باشد */
+.row{  
+ display: -ms-flexbox; 
+ display: flex;
+ -ms-flex-wrap: wrap; 
+ flex-wrap: wrap;
+}
+
+/* ستون های سمت راست و چپ */
+.side{
+ -ms-flex: 25%;
+ flex: 25%;
+}
+
+/* باکس های داخل ستون های سمت راست و چپ */
+.side .side-box{
+ background-color: #fff;
+ padding: 20px;
+ margin:10px;
+ box-shadow: 2px 5px 30px rgba(0,0,0,.1);
+}
+
+/* تگ های اچ 3 داخل ستون های سمت راست و چپ */
+.side h3{
+ font-size:18px;
+ background-color: #A4441F;
+ background: linear-gradient(90deg, #60cfe6 0%, #e6608b 100%);
+ padding: 7px;
+ border-radius: 40px;
+ color: #fff;
+ text-align: center;
+}
+
+/* ستون وسطی - مطالب سایت */
+.main{   
+ -ms-flex: 50%;
+ flex: 50%;
+ padding: 0 10px;
+}
+
+/* فوتر */
+.footer{
+ padding: 20px;
+ text-align: center;
+ background-color: #A4441F;
+ background: linear-gradient(90deg, #60cfe6 0%, #e6608b 100%);
+ color:#fff;
+}
+
+/* لینک های داخل فوتر */
+.footer a{
+ text-decoration:none;
+ color:#fff;
+}
+
+/* وقتی ماوس میره روی لینک های داخل فوتر */
+.footer a:hover{
+ text-decoration:underline;
+}
+
+/* باکس مطالب */
+.mypost{
+ background-color:#fff;
+ box-shadow: 2px 5px 30px rgba(0,0,0,.1);
+ padding:20px;
+ margin:10px 0;
+}
+
+/* لینک های داخل باکس مطالب */
+.mypost a{
+ text-decoration:none;
+ color:#000;
+}
+
+/* وقتی ماوس میره روی لینک های داخل باکس مطالب */
+.mypost a:hover{
+ text-decoration:underline;
+ color:#000;
+}
+
+/* خط جداکننده مطالب */
+hr{
+ border:2px solid #f2f2f2;
+ margin:20px 0;
+}
+
+/* وقتی با ماوس متن رو انتخاب میکنیم */
+::selection{
+ background-color:purple;
+ color:#fff;
+}
+
+-moz-::selection{
+ background-color:#5db616;
+ color:#fff;
+}
+
+/* دکمه ادامه مطلب */
+.more-post{
+ text-align:center;
+ padding:10px;
+ background: linear-gradient(90deg, #60cfe6 0%, #e6608b 100%);
+ background-color:#f2f2f2;
+}
+
+/* لینک های داخل دکمه ادامه مطلب */
+.more-post a{
+ text-decoration:none;
+ color:#fff;
+}
+
+/* محبوب ترین دسته ها */
+ul.MyList{
+ margin:0;
+ padding:0;
+ list-style-type:none;
+}
+
+ul.MyList li{
+ background-color:#f2f2f2;
+ margin:5px 0;
+ padding:5px 10px;
+ border-radius:25px;
+}
+
+ul.MyList li a{
+ text-decoration:none;
+ color:#000;
+}
+
+ul.MyList li:hover{
+ background-color:#123456;
+ color:#fff;
+}
+
+ul.MyList li:hover a{
+ color:#fff;
+}
+
+/* برای واکنش گرایی */
+/* روی موبایل ستون های سمت راست و چپ و وسط میوفتن زیرهم */
+@media screen and (max-width: 700px) {
+  .row{   
+    flex-direction: column;
+  }
+}
+
+/* برای واکنش گرایی */
+/* آیتم های منو بصورت تمام عرض نمایش داده میشن */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+  .side{
+   margin: 10px;
+  }
+}
+.mypost a {
+color:blue;
+}
+
+</style>
+</head>
+<body>
+<header class="navbar">
+ <a href="../saha.html" class="active">خانه</a>
+ <a href="link1.html">مطالب</a>
+ <a href="link2.html">لینک ها</a>
+ <a href="link3.html">بازی ها</a>
+ <a href="link4.html" class="right">همین حالا بازی کن!</a>
+</header>
+<div class="mypost">
+ <h2>بازی ها</h2>
+ <hr>
+ <p style="color:blue;">-بازی جدید منتشر شد!-</p>
+ <a href="https://www.construct.net/en/free-online-games/lost-time-cube-39092/play" target="_blank">-پنهان در زمان : مکعب(نسخه وب)-</a><br>
+ <a href="https://sahabiagames.github.io/LOST-IN-TIME-CUBE/" target="_blank">-پنهان در زمان : مکعب(نسخه گیت هاب)-</a><br>
+ <hr>
+ <a href="https://sahabiagames.github.io/mano-adventure/" target="_blank">-ماجراجویی مانو(گیت هاب)-</a><br>
+ <a href="https://myket.ir/app/com.saha.corona" target="_blank">-نابودگر کرونا ( نسخه اندروید)-</a><br>
+ <a href="https://myket.ir/app/com.saha.cg" target="_blank">-مسابقه ماشین ها ( نسخه اندروید)-</a><br>
+ <a href="https://myket.ir/app/com.saha.run" target="_blank">-مربع دونده : دویدن بینهایت ( نسخه اندروید)-</a><br>
+<a href="https://myket.ir/app/com.saha.run?utm_source=search-ads-gift&utm_medium=cpc"><img src="https://myket.ir/core/images/logo/get2-fa.png" width="250px" height="83px" /> </a><br>
+ <a href="https://myket.ir/app/com.saha.energy" target="_blank">-محاسبه ی انرژی گرانشی و جنبشی ( نسخه اندروید)-</a><br>
+ <a href="https://myket.ir/app/com.saha.spaceship" target="_blank">-موشک نابودگر ( نسخه اندروید)-</a><br>
+ <a href="https://myket.ir/app/com.saha.spaceship2" target="_blank">-موشک نابودگر2 ( نسخه اندروید)-</a><br>
+<a href="https://myket.ir/app/com.saha.mr.blue" target="_blank">-چشم آبی [ مناسب برای اندروید پایین ]-( نسخه اندروید)-</a><br>
+<a href="https://myket.ir/app/com.saha.math" target="_blank">-بازی با اعداد ریاضی(نسخه اندروید)-</a><br>
+<a href="https://www.construct.net/en/free-online-games/tic-tac-toe-34409/play" target="_blank">-دوز(نسخه وب)-</a><br>
+<a href="https://www.construct.net/en/free-online-games/mano-adventure-33300/play" target="_blank">-ماجراجویی مانو ( نسخه وب)-</a><br>
+<a href="https://www.construct.net/en/free-online-games/car-racing-33129/play" target="_blank">-مسابقه ی ماشین ها(نسخه وب)-</a><br>
+<a href="https://www.construct.net/en/free-online-games/runner-square-32911/play" target="_blank">-مربع دونده : دویدن بینهایت ( نسخه وب) -</a><br>
+<a href="https://www.construct.net/en/free-online-games/pen-alien-32789/play" target="_blank">-هیولای نقاشی(نسخه وب - کامل نشده )-</a><br>
+<a href="https://www.construct.net/en/free-online-games/corona-fighter-32579/play" target="_blank">-نابودگر کرونا(نسخه وب)-</a><br>
+<a href="https://www.construct.net/en/free-online-games/tank-mobile-desktopof-mini-32092/play" target="_blank">-تانک (از سری mini blue car)- ( نسخه وب - آزمایشی)-</a><br>
+<a href="https://www.construct.net/en/free-online-games/police-mobile-desktopof-mini-32049/play" target="_blank">-پلیس ( از سری mini blue car)-(نسخه وب)-</a><br>
+<a href="https://www.construct.net/en/free-online-games/chating-robot-31948/play" target="_blank">-ربات چت(نسخه وب)-</a><br>
+<a href="https://www.construct.net/en/free-online-games/mini-blue-war-car-31480/play" target="_blank">-جنگ ماشین آبی کوچک(از سری mini blue car)-(نسخه وب)-</a><br>
+<a href="https://www.construct.net/en/free-online-games/mr-turnip-mobile-31397/play" target="_blank">-آقای شلغم برای موبایل (نسخه وب)-</a><br>
+<a href="https://www.construct.net/en/free-online-games/mini-blue-car-gamepad-30806/play" target="_blank">-ماشین آبی کوچک برای دسته بازی (نسخه وب)-</a><br>
+<a href="https://www.construct.net/en/free-online-games/mini-blue-car-mobile-30803/play" target="_blank">-ماشین آبی کوچک برای موبایل(نسخه وب)-</a><br>
+<a href="https://www.construct.net/en/free-online-games/mini-blue-car-30407/play" target="_blank">-ماشین آبی کوچک (نسخه وب)-</a><br>
+<a href="https://www.construct.net/en/free-online-games/mr-turnip-30397/play" target="_blank">-آقای شلغم(نسخه وب)-</a><br>
+<a href="https://www.construct.net/en/free-online-games/circle-marios-world-30383/play" target="_blank">-دایره در دنیای ماریو (اولین بازی ای که توی کانستراکت ساختم ! - نسخه وب)-</a><br>
+<a href="https://scratch.mit.edu/projects/558055297/" target="_blank">-موش ( منقضی شده - اسکرچ )-</a><br></div>
+<div class="footer">
+ <p>sahabia</p>
+</div>
+
+</body>
+</html>

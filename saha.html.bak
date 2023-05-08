@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+<head>
+<title>sahabia</title>
+<meta charset="UTF-8">
+<link href="MYLOGO.png" rel="shortcut icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@font-face { 
+font-family: 'best'; src: url('fonts/best.ttf'); format('truetype'); 
+}
+/* تفکیک سایز تگ ها */
+*{
+ box-sizing: border-box;
+}
+
+/* محبوب ترین دسته ها */
+body{
+ font-family: best;
+ margin: 0;
+ direction:rtl;
+ background-color:#f2f2f2;
+}
+
+/* هدر */
+.header{
+ padding: 40px;
+ text-align: center;
+ 
+ color: #0e264a;
+ background-image: url(ee.jpg);
+ background-attachment: fixed;
+ background-position: center bottom;
+ background-size: cover;
+ //https://files.free-learn.ir/Tryitself/html/tags/files/div-demo-bg.jpg
+//https://photobag.ir/videoframe/img/product/5044261_big.jpg
+} 
+
+.header h1{
+ font-size: 30px;
+}
+
+/* منوی اصلی */
+.navbar{
+ overflow: hidden;
+ background-color: #8f5f96;
+ position: sticky;
+}
+
+/* آیتم های منو */
+.navbar a{
+ float: right;
+ display: block;
+ color: #fff;
+ text-align: center;
+ padding: 14px 20px;
+ text-decoration: none;
+ font-size:15px;
+ position: sticky;
+}
+
+/* آیتم شناور شده بسمت چپ */
+.navbar a.right {
+  float: left;
+  position: sticky;
+}
+
+/* وقتی ماوس میره روی آیتم های منو */
+.navbar a:hover{
+ background-color: #484c66;
+ color: #fff;
+}
+
+/* آیتم فعال - صفحه جاری */
+.navbar a.active{
+ background-color: #484c66;
+ color: #fff;
+}
+
+/* باکس اصلی که شامل ستون ها و باکس مطالب می باشد */
+.row{
+ display: -ms-flexbox;
+ display: flex;
+ -ms-flex-wrap: wrap;
+ flex-wrap: wrap;
+}
+
+/* ستون های سمت راست و چپ */
+.side{
+ -ms-flex: 25%;
+ flex: 25%;
+}
+
+/* باکس های داخل ستون های سمت راست و چپ */
+.side .side-box{
+ background-color: #fff;
+ padding: 20px;
+ margin:10px;
+ box-shadow: 2px 5px 30px rgba(0,0,0,.1);
+}
+
+/* تگ های اچ 3 داخل ستون های سمت راست و چپ */
+.side h3{
+ font-size:18px;
+ background-color: #A4441F;
+ background: linear-gradient(90deg, #60cfe6 0%, #e6608b 100%);
+ padding: 7px;
+ border-radius: 40px;
+ color: #fff;
+ text-align: center;
+}
+
+/* ستون وسطی - مطالب سایت */
+.main{
+ -ms-flex: 50%;
+ flex: 50%;
+ padding: 0 10px;
+}
+
+/* فوتر */
+.footer{
+ padding: 20px;
+ text-align: center;
+ background-color: #A4441F;
+ background: linear-gradient(90deg, #60cfe6 0%, #e6608b 100%);
+ color:#fff;
+}
+
+/* لینک های داخل فوتر */
+.footer a{
+ text-decoration:none;
+ color:#fff;
+}
+
+/* وقتی ماوس میره روی لینک های داخل فوتر */
+.footer a:hover{
+ text-decoration:underline;
+}
+
+/* باکس مطالب */
+.mypost{
+ background-color:#fff;
+ box-shadow: 2px 5px 30px rgba(0,0,0,.1);
+ padding:20px;
+ margin:10px 0;
+}
+
+/* لینک های داخل باکس مطالب */
+.mypost a{
+ text-decoration:none;
+ color:#000;
+}
+
+/* وقتی ماوس میره روی لینک های داخل باکس مطالب */
+.mypost a:hover{
+ text-decoration:underline;
+ color:#000;
+}
+
+/* خط جداکننده مطالب */
+hr{
+ border:2px solid #f2f2f2;
+ margin:20px 0;
+}
+
+/* وقتی با ماوس متن رو انتخاب میکنیم */
+::selection{
+ background-color:purple;
+ color:#fff;
+}
+
+-moz-::selection{
+ background-color:#5db616;
+ color:#fff;
+}
+
+/* دکمه ادامه مطلب */
+.more-post{
+ text-align:center;
+ padding:10px;
+ background: linear-gradient(90deg, #60cfe6 0%, #e6608b 100%);
+ background-color:#f2f2f2;
+}
+
+/* لینک های داخل دکمه ادامه مطلب */
+.more-post a{
+ text-decoration:none;
+ color:#fff;
+}
+
+/* محبوب ترین دسته ها */
+ul.MyList{
+ margin:0;
+ padding:0;
+ list-style-type:none;
+}
+
+ul.MyList li{
+ background-color:#f2f2f2;
+ margin:5px 0;
+ padding:5px 10px;
+ border-radius:25px;
+}
+
+ul.MyList li a{
+ text-decoration:none;
+ color:#000;
+}
+
+ul.MyList li:hover{
+ background-color:#123456;
+ color:#fff;
+}
+
+ul.MyList li:hover a{
+ color:#fff;
+}
+
+/* برای واکنش گرایی */
+/* روی موبایل ستون های سمت راست و چپ و وسط میوفتن زیرهم */
+@media screen and (max-width: 700px) {
+  .row{
+    flex-direction: column;
+  }
+}
+
+/* برای واکنش گرایی */
+/* آیتم های منو بصورت تمام عرض نمایش داده میشن */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+  .side{
+   margin: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+ <h2>سایت سها بیابانکی</h2>
+ <p>به سایت سها بیابانکی خوش آمدید</p>
+</div>
+
+<header class="navbar">
+ <a href="saha.html" class="active">خانه</a>
+ <a href="htmls/link1.html">مطالب</a>
+ <a href="htmls/link2.html">لینک ها</a>
+ <a href="htmls/link3.html">بازی ها</a>
+ <a href="htmls/link4.html" class="right">همین حالا بازی کن!</a>
+</header>
+
+<div class="row">
+<div class="side">
+
+ <div class="side-box">
+  <h3>درباره من</h3>
+  <p>من ،سها بیابانکی متولد مهر 88 و یکی از دوستداران علوم کامپیوتر،بازی سازی و برنامه نویسی هستم . <br>امیدوارم از این سایت نهایت استفاده را ببرید .باتشکر.</p>
+ </div>
+
+ 
+
+ <div class="side-box">
+  <h3>انجین هایی که با آن ها کار میکنم</h3>
+   <ul class="MyList">
+    <li><a href="#">کانستراکت</a></li>
+    <li><a href="#">یونیتی</a></li>
+    <li><a href="#">گیم میکر</a></li>
+    <li><a href="#">گودوت انجین</a></li>
+	<li><a href="#">آنریل انجین (مبتدی)</a></li>
+   </ul>
+ </div>
+
+ <div class="side-box">
+  <h3>بازی هایی که ساخته ام</h3>
+  <p>مسابقه ماشین ها ، ماجراجویی مانو ، دایره در دنیای ماریو ، مربع دونده، نابودگر کرونا و ...</p>
+ </div>
+
+</div>
+
+<div class="main">
+
+<div class="mypost">
+ <h2>طراحی کاراکتر</h2>
+ <hr>
+ <p>در این مطلب می خواهم به شما سایتی رو معرفی کنم برای طراحی کاراکتر پیکسلی. اگر روی صفحه خانه هستید ، روی مشاهده کامل مطلب کلیک نمایید.</p>
+ <hr>
+ <div class="more-post"><a href="mataleb/1.html" title="درباره این مطلب بیشتر بخوانید">مشاهده کامل مطلب</a></div>
+</div>
+
+<div class="mypost">
+ <h2>فوتوشاپ آنلاین</h2>
+ <hr>
+ <p>در این مطلب میخواهم یک سایت ویرایش آنلاین رو معرفی کنم. اگر در حال مطالعه این مطلب از روی صفحه خانه هستید ، روی مشاهده کامل مطلب کلیک نمایید.</p>
+ <hr>
+ <div class="more-post"><a href="mataleb/2.html" title="درباره این مطلب بیشتر بخوانید">مشاهده کامل مطلب</a></div>
+</div>
+
+<div class="mypost">
+ <h2>دانلود کاراکتر رایگان !</h2>
+ <hr>
+ <p>این بار می خواهم به شما سایتی را برای دانلود کاراکتر رایگان معرفی کنم. اگر در صفحه خانه هستید ، روی مشاهده کامل مطلب کلیک نمایید.</p>
+ <hr>
+ <div class="more-post"><a href="mataleb/3.html" title="درباره این مطلب بیشتر بخوانید">مشاهده کامل مطلب</a></div>
+</div>
+
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+<div class="footer">
+ <p>sahabia</p>
+</div>
+
+</body>
+</html>
